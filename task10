@@ -1,0 +1,11 @@
+def minmax_scale(xs: list[float]) -> list[float]:
+    if not xs:
+        return []
+    mn, mx = min(xs), max(xs)
+    if mn == mx:
+        return [0.0] * len(xs)
+    return [(x - mn) / (mx - mn) for x in xs]
+
+
+print(minmax_scale([10, 20, 30]))
+print(minmax_scale([5, 5, 5]))
