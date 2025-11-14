@@ -1,0 +1,5 @@
+def scale_and_shift(xs, scale: float, shift: float):
+    return list(map(lambda x: scale * x + shift, xs))
+
+
+print(scale_and_shift([1, 2, 3], 2.0, -1.0))
