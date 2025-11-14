@@ -1,0 +1,10 @@
+from functools import reduce
+
+def char_hist(s: str) -> dict[str, int]:
+    return reduce(
+        lambda acc, c: (acc.update({c: acc.get(c, 0) + 1}) or acc),
+        s,
+        {}
+    )
+
+print(char_hist("aba c"))
