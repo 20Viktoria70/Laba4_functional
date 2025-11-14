@@ -1,0 +1,12 @@
+def is_strong_password(s: str) -> bool:
+    return (
+        len(s) >= 8
+        and any(c.isupper() for c in s)
+        and any(c.islower() for c in s)
+        and any(c.isdigit() for c in s)
+        and any(c in "!@#$%^&*()-_=+[]{};:,.<>?/\\|" for c in s)
+    )
+
+
+print(is_strong_password("Qwerty12!"))  # True
+print(is_strong_password("qwerty12"))   # False
