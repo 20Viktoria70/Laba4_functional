@@ -1,0 +1,9 @@
+def filter_emails(items):
+    return list(filter(
+        lambda s: "@" in s and "." in s.split("@")[-1],
+        items
+    ))
+
+
+emails = ["a@b.com", "wrong@", "x@y", "john.doe@mail.org"]
+print(filter_emails(emails))
